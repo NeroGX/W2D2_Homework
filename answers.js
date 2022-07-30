@@ -63,13 +63,40 @@ for (const element of ninjaTurtles) {
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
-
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+console.log(favMovies[8]);
+//favMovies.sort();
+//console.log(favMovies);  // It will alter the array by sorting the array.
+ favMovies.pop();
+ favMovies.push('Guardians of the Galaxy');
+//console.log(favMovies);
+// favMovies.shift();
+// favMovies.shift();
+// favMovies.shift();
+// favMovies.shift();
+// favMovies.shift();
+// console.log(favMovies);
+// favMovies.unshift(); // unshift doesn't return anything since there is nothing in the argument.
+//console.log(favMovies);
+let djIndex = favMovies.indexOf('Django Unchained');
+favMovies.splice(djIndex, 1, 'Avatar');  // splice will permanently alter the array
+console.log(favMovies);
+let middleIndex = Math.ceil(favMovies.length / 2);
+const halfFavMovies = favMovies.slice(middleIndex - 1); // slice does not mutate the array
+console.log(halfFavMovies);
+console.log(favMovies.indexOf('Fast and Furious')); // value is -1.
 
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
 
-
+whereIsWaldo.splice(whereIsWaldo.indexOf("Eggbert"), 1);
+whereIsWaldo[1][2] = "No One"
+console.log(whereIsWaldo);
+console.log(whereIsWaldo[2][1][1])
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////

@@ -101,6 +101,16 @@ console.log(whereIsWaldo[2][1][1])
 //  Excited Kitten
 ////////////////////////////////
 
+const catTalk = ['Hooman,... why are you taking pictures of me.', 'No, leave me alone.', '...the catnip made me do it...', '...why does the red dot always get away...', '...oooh, the hand is warm']
+for (let i = 1; i <= 20; i++) {
+    let randomNum = Math.floor(Math.random() * catTalk.length);
+    if (i % 2 === 0) {
+        console.log(catTalk[randomNum]);
+    } 
+    else {
+        console.log('Love me, pet me! HSSSSSS!');
+    }
+}
 
 ////////////////////////////////
 //  Find the Median

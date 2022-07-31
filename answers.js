@@ -64,12 +64,14 @@ for (const element of ninjaTurtles) {
 // Methods, Revisited
 ////////////////////////////////
 const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
-console.log(favMovies[8]);
+console.log(favMovies.indexOf('Titanic'));
 //favMovies.sort();
-//console.log(favMovies);  // It will alter the array by sorting the array.
+//console.log(favMovies);  // It will alter the array by sorting the array in alphabetic order.
  favMovies.pop();
  favMovies.push('Guardians of the Galaxy');
 //console.log(favMovies);
+favMovies.reverse();
+console.log(favMovies);
 // favMovies.shift();
 // favMovies.shift();
 // favMovies.shift();
@@ -81,7 +83,7 @@ console.log(favMovies[8]);
 let djIndex = favMovies.indexOf('Django Unchained');
 favMovies.splice(djIndex, 1, 'Avatar');  // splice will permanently alter the array
 console.log(favMovies);
-let middleIndex = Math.ceil(favMovies.length / 2);
+let middleIndex = Math.floor(favMovies.length / 2);
 const halfFavMovies = favMovies.slice(middleIndex - 1); // slice does not mutate the array
 console.log(halfFavMovies);
 console.log(favMovies.indexOf('Fast and Furious')); // value is -1.
@@ -118,5 +120,5 @@ for (let i = 1; i <= 20; i++) {
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 nums.sort();
 console.log(nums);
-let median = Math.ceil(nums.length / 2);
+let median = Math.floor(nums.length / 2);
 console.log(nums[median]);
